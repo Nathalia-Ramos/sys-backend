@@ -19,7 +19,7 @@ export default class {
              res.status(400).json({error: "Existem campos obrigatórios que não foram preenchidos"})
 
         try {
-            const newPatient = await prismaClient.paciente.create({
+           await prismaClient.paciente.create({
                 data:{
                     nome_paciente,
                     celular_paciente,
